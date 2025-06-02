@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-def generate_data(num_rows=100):
+def generate_data(num_rows):
     data = {
         "feature1": np.random.rand(num_rows),
         "feature2": np.random.rand(num_rows),
@@ -18,6 +18,7 @@ def save_data(df, filename="data.csv"):
     print(f"Data saved to {filepath}")
 
 if __name__ == "__main__":
-    df = generate_data(100)
+    df = generate_data(50)
+    print(df.shape)  # Add this line to check number of rows
     save_data(df, "data.csv")
     print("Data generation complete.")
